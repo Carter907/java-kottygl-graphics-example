@@ -46,6 +46,18 @@ public class RedTriangleApp extends GlApp {
         );
         vertAttribute.associateVariable(getProgramRef(), "pos");
 
+        float[] vertColors = {
+                1f, 0f, 0f,
+                0f, 1f, 0f,
+                0f, 0f, 1f,
+        };
+
+        var vertColorAttribute = new Attribute(
+                GlDataType.VEC3,
+                vertColors
+        );
+        vertColorAttribute.associateVariable(getProgramRef(), "vert_Color");
+
         transl = new Uniform<>(
                 GlDataType.VEC3,
                 new Vector(0.0,0.0,0.0)
